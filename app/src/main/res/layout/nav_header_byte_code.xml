@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+
+    android:orientation="vertical"
+
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="30dp"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+android:background="@drawable/fondoapp"
+        android:layout_gravity="center"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="Navigation header"
+            app:srcCompat="@drawable/user_menu"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/menu_name"
+            android:layout_height="wrap_content"
+            style="@style/CodeFontLogo"
+            android:textStyle="bold"
+            android:paddingTop="3dp"
+            android:text="Usuario Invitado"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/menu_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text"
+            style="@style/CodeFontLogo"
+            android:textSize="13dp"
+            android:text="Telf: 78140596" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        />
+</LinearLayout>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/id_scroll_viewProduct"
+    android:layout_gravity="fill_vertical"
+    android:fillViewport="true"
+android:foregroundGravity="bottom"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView android:id="@+id/imagerotate"
+            android:layout_width="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="@dimen/keyline_1_minus_8dp"
+            android:layout_marginTop="@dimen/keyline_1_minus_8dp"
+            android:layout_marginRight="@dimen/keyline_1_minus_8dp"
+            android:layout_marginBottom="@dimen/keyline_1_minus_8dp"
+            app:cardCornerRadius="20dp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/producto_slider"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                style="@style/StyleNegocios"
+
+                />
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+
+            android:layout_width="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_height="fill_parent"
+
+            android:layout_marginTop="@dimen/keyline_1_minus_8dp"
+android:id="@+id/cardViewProducto"
+            app:cardCornerRadius="3dp"
+            android:background="@color/white"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingLeft="8dp"
+                android:id="@+id/test"
+                android:layout_alignParentBottom="true"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/navy"
+                    android:text="Tienda de Ropa de Bebes"
+                    android:id="@+id/view_nameProducto"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:paddingLeft="8dp"
+                    style="@style/StyleTitle"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary_text"
+                    android:text="Tienda de Ropa de Bebes"
+                    android:id="@+id/view_marcaProducto"
+                    android:textSize="12dp"
+                    style="@style/StyleContent"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="8dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="8dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:paddingTop="10dp"
+                        >
+                        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                            android:id="@+id/view_producto_cantidad"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            app:initialNumber="0"
+                            app:finalNumber="50"
+                            android:layout_gravity="center"
+                            app:textColor="@color/white"
+                            android:padding="2dp"
+                            app:backGroundColor="@color/amarillo"
+
+                            >
+                        </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="55 bs"
+                            android:id="@+id/view_producto_precio"
+                            android:textSize="30dp"
+                            style="@style/StyleTitleSinBold"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/navy"
+                    android:text="Descripción del Producto"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:paddingLeft="8dp"
+                    style="@style/StyleTitle"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary_text"
+                    android:text="Chinelas Ipanemas Brazileras Clasicas desde el numero 34 hasta el 40"
+                    android:id="@+id/view_descripcionProduct"
+                    android:textSize="13dp"
+                    style="@style/StyleContent"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/navy"
+                    android:text="Agregar Detalle Pedido:"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="12dp"
+                    style="@style/StyleTitle"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="5dp"
+                    >
+                    <EditText
+                        android:id="@+id/crear_detallevisita_descripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/animation_editext"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+
+                        android:textColor="@color/primary_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:hint="Agregue una nota del producto (Ej. Color, Tamaño, etc)" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="18dp"
+                    android:paddingRight="10dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="10dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="8dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@drawable/animation_bottonprimary"
+                            android:id="@+id/linear_ubicacion"
+                            >
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_map"
+                                android:paddingLeft="5dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Visitanos"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                style="@style/StyleContent"
+                                android:textStyle="bold"
+                                android:paddingLeft="10dp"
+                                />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:background="@drawable/animation_bottonestadoactivo"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/linear_whatsapp"
+                        >
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_whatsapp"
+                            android:paddingLeft="5dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chatea Con Nosotros"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            style="@style/StyleContent"
+                            android:textStyle="bold"
+                            android:paddingLeft="10dp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:layout_gravity="center"
+
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            >
+                            <TextView
+                                android:id="@+id/product_cantidad_order"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20 Items"
+                                style="@style/StyleTitle"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:paddingBottom="2dp"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                >
+                                <LinearLayout
+                                    android:layout_width="1.1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/white"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    />
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/product_total_order"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="96.0 Bs"
+                                style="@style/StyleTitle"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+
+
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="3dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/btn_carrito"
+                            android:background="@drawable/animation_riple_button"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            >
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_shopping"
+                                android:paddingLeft="5dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ver Carrito"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                style="@style/StyleContent"
+                                android:textStyle="bold"
+                                android:textSize="10dp"
+                                android:paddingLeft="10dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/item_store"
+            android:icon="@drawable/store"
+            android:title="Ver Tiendas"
+            android:visible="false"/>
+        <item
+            android:id="@+id/item_navigation_drawer_pedidos"
+            android:title="Mi Carrito"
+            android:icon="@drawable/ic_order"
+            android:visible="true"/>
+        <item
+            android:id="@+id/item_navigation_drawer_entregados"
+            android:title="Pedidos Realizados"
+            android:icon="@drawable/order"
+            android:visible="true"/>
+        <item
+            android:id="@+id/item_navigation_drawer_mapa"
+            android:title="Mi Perfil"
+            android:icon="@drawable/perfil"
+            android:visible="true"/>
+        <item
+            android:checked="true"
+            android:id="@+id/item_navigation_drawer_sincronizar"
+            android:icon="@drawable/company"
+            android:title="Acerca de la Empresa"
+            android:visible="false"/>
+
+
+    </group>
+    <group
+        android:id="@+id/drawer_group_2"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/item_navigation_drawer_help_and_feedback"
+            android:icon="@drawable/ic_setting"
+            android:title="Cerrar Sesión" />
+    </group>
+
+</menu>

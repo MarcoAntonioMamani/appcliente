@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v7.widget.CardView android:id="@+id/card_empresa"
+    android:layout_width="match_parent"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_marginLeft="@dimen/keyline_1_minus_8dp"
+    android:layout_marginTop="@dimen/keyline_1_minus_8dp"
+    android:layout_marginRight="@dimen/keyline_1_minus_8dp"
+    android:layout_marginBottom="@dimen/keyline_1_minus_8dp"
+    app:cardCornerRadius="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="3.2"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_empresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/testfondo01"
+                        android:scaleType="fitXY"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|bottom"
+                        android:background="@android:drawable/screen_background_dark_transparent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name_empresa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            style="@style/StyleTitle"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:text="Baby Thunder"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="12dp"
+
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    android:paddingRight="2dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Tienda de Ropa de Bebes"
+                        android:id="@+id/empresa_descripcioncorta"
+                       android:textStyle="bold"
+                        style="@style/StyleTitle"
+                        />
+
+                    <TextView
+                        android:id="@+id/empresa_descripcion"
+                        style="@style/StyleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="Tenemos Ropas para tu niños. Atendemos desde las 08:00 - 14:00 de Lunes a Viernes"
+                        android:textColor="@color/secondary_text" />
+
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:paddingTop="4dp"
+                       >
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:layout_gravity="center"
+                           >
+                           <TextView
+                               android:id="@+id/empresa_estado"
+                               android:layout_width="fill_parent"
+                               android:layout_height="fill_parent"
+                               android:text="Abierto hasta las 20:00"
+                               android:layout_gravity="center"
+                               android:gravity="center"
+                               android:textColor="@color/intro_slide_2_light"
+                               style="@style/StyleNegocios"
+                               android:textSize="10dp"
+
+                               /></LinearLayout>
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+
+                           android:layout_weight="2">
+                           <LinearLayout
+                               android:layout_width="fill_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="right"
+                               android:gravity="right">
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:paddingRight="10dp"
+                                   >
+                                   <ImageButton
+                                       android:id="@+id/empresa_btnmapa"
+                                       android:layout_width="50dp"
+                                       android:layout_height="30dp"
+                                       android:src="@drawable/ic_map"
+                                       android:background="@drawable/animation_riple_maps"
+                                       android:scaleType="fitCenter"
+                                       android:adjustViewBounds="true"
+
+                                       />
+                               </LinearLayout>
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:paddingRight="10dp"
+                                   >
+                                   <ImageButton
+                                       android:id="@+id/empresa_btnllamar"
+                                       android:layout_width="50dp"
+                                       android:layout_height="30dp"
+                                       android:src="@drawable/cell_phone"
+                                       android:background="@drawable/animation_riple_maps"
+                                       android:scaleType="fitCenter"
+                                       android:adjustViewBounds="true"
+
+                                       />
+                               </LinearLayout>
+
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:paddingRight="0dp"
+                                   >
+                                   <ImageButton
+                                       android:id="@+id/empresa_btnwhatsapp"
+                                       android:layout_width="50dp"
+                                       android:layout_height="30dp"
+                                       android:src="@drawable/ic_whatsapp"
+                                       android:background="@drawable/animation_riple_edit"
+                                       android:scaleType="fitCenter"
+                                       android:adjustViewBounds="true"
+
+                                       />
+                               </LinearLayout>
+
+                           </LinearLayout>
+                       </LinearLayout>
+                   </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+
