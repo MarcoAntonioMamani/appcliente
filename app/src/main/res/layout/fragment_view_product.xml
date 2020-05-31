@@ -180,7 +180,7 @@ android:id="@+id/cardViewProducto"
                     android:paddingRight="5dp"
                     >
                     <EditText
-                        android:id="@+id/crear_detallevisita_descripcion"
+                        android:id="@+id/edittext_descripcion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/animation_editext"

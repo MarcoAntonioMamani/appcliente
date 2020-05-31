@@ -8,9 +8,12 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -61,6 +64,7 @@ TextView tvPrecio;
     TextView tvCantidadItems;
     TextView tvTotalPrecio;
     List<PedidoDetalle> listDetalle;
+    EditText eTextDescripcion;
     public ViewProductFragment() {
         // Required empty public constructor
     }
@@ -81,7 +85,7 @@ TextView tvPrecio;
         linearWhatsapp=(LinearLayout)view.findViewById(R.id.linear_whatsapp);
         linearUbicacion=(LinearLayout)view.findViewById(R.id.linear_ubicacion);
         btnCantidad=(ElegantNumberButton)view.findViewById(R.id.view_producto_cantidad);
-
+        eTextDescripcion=(EditText)view.findViewById(R.id.edittext_descripcion);
         sliderLayout.setPresetTransformer(SliderLayout.Transformer.ZoomIn);
         sliderLayout.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
 
@@ -105,7 +109,40 @@ TextView tvPrecio;
         }
         SetearTotalesResumen();
         EventCantidad();
+        EventEditText();
         return view;
+    }
+
+    public void EventEditText(){
+        eTextDescripcion.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String contenido=s.toString();
+                ModificarContenido(DataCache.ProductoSelected,contenido);
+                Gson gson = new Gson();
+                String json = gson.toJson(listDetalle);
+                DataPreferences.putPref("Pedido",json,getContext());
+            }
+        });
+    }
+    void ModificarContenido(ProductosEntity p , String value){
+        for (int i = 0; i < listDetalle.size(); i++) {
+
+            if (p.getId()==listDetalle.get(i).getProductoId()){
+                listDetalle.get(i).setDetalle(value);
+            }
+        }
+
     }
     public void EventCantidad(){
         btnCantidad.setOnValueChangeListener(new ElegantNumberButton.OnValueChangeListener() {
@@ -270,8 +307,18 @@ TextView tvPrecio;
         tvDescripcion.setText(producto.getDescripcionProducto());
         tvPrecio.setText(producto.getPrecio()+" Bs");
         btnCantidad.setNumber(getCantidad(producto.getId()));
+        eTextDescripcion.setText(getDescripcion(producto.getId()));
     }
+    public String getDescripcion(int ProductoId){
 
+        for (int i = 0; i < DataCache.listDetalle.size(); i++) {
+            if(DataCache.listDetalle.get(i).getProductoId()==ProductoId){
+                return ""+DataCache.listDetalle.get(i).getDetalle();
+            }
+
+        }
+        return "";
+    }
     public String getCantidad(int ProductoId){
 
         for (int i = 0; i < DataCache.listDetalle.size(); i++) {
