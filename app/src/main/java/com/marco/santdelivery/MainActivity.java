@@ -30,6 +30,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.marco.santdelivery.Carrito.CarritoFragment;
 import com.marco.santdelivery.Empresas.EmpresasFragment;
 import com.marco.santdelivery.ShareUtil.DataCache;
 import com.marco.santdelivery.ShareUtil.DataPreferences;
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                         setFragment(2);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         return true;
-                    case R.id.item_navigation_drawer_pedidos:
+                    case R.id.item_carrito:
                         setFragment(3);
                         item.setChecked(true);
                         //setFragment(2);
@@ -165,8 +166,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 3:
                 returnToMain();
-                /*frag = new ListPedidosFragment(1);
-                tag = Constantes.TAG_PEDIDOS;*/
+                frag = new CarritoFragment();
+                tag = "Ver Carrito";
                 break;
             case 4:
                 returnToMain();
@@ -235,11 +236,11 @@ public class MainActivity extends AppCompatActivity {
         /*userNameView.setText("Bienvenido : ");
         userEmailView.setText(nameRepartidor);*/
         userNameView.setText("Bienvenido : Usuario Invitado");
-        userEmailView.setText("Telf: 78140596");
+        userEmailView.setText("Telf: S/N");
 
         MenuItem menulcv = navigationView.getMenu().findItem(R.id.item_navigation_drawer_sincronizar);
          menucli= navigationView.getMenu().findItem(R.id.item_store);
-        MenuItem menuped = navigationView.getMenu().findItem(R.id.item_navigation_drawer_pedidos);
+        MenuItem menuped = navigationView.getMenu().findItem(R.id.item_carrito);
         MenuItem menuMapa = navigationView.getMenu().findItem(R.id.item_navigation_drawer_mapa);
         MenuItem menupedEntregados = navigationView.getMenu().findItem(R.id.item_navigation_drawer_entregados);
         menulcv.setVisible(true);
@@ -308,13 +309,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     private void loadWelcomeFragment(){
-        /*switchHandler.post(new Runnable() {
+       /* switchHandler.post(new Runnable() {
             @Override
             public void run() {
                 getSupportFragmentManager()
                         .beginTransaction()
                         .addToBackStack("WELCOMEFRAGMENT")
-                        .replace(R.id.fragment, new MainFragment())
+                        .replace(R.id.fragmentMain, new EmpresasFragment())
                         .commit();
             }
         });*/

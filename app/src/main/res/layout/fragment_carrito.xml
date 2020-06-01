@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="fill_vertical"
+    android:fillViewport="true"
+    android:foregroundGravity="bottom"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.CardView
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/white"
+        card_view:cardCornerRadius="5dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/line_drawable"
+
+                />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="7dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingRight="7dp"
+
+                    >
+                    <ImageView
+                        android:id="@+id/carrito_img_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/testfondo01"
+                        android:scaleType="fitXY"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                >
+                <LinearLayout
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/gray_light"
+
+                    />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="2dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text"
+                        android:text="Baby Thunder"
+                        android:id="@+id/carrito_name_empresa"
+                        android:textStyle="bold"
+                        style="@style/StyleTitle"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_dark"
+                        android:maxLines="2"
+                        android:id="@+id/carrito_empresa_descripcion"
+
+                        android:text="Barrio Nueva America entre 7 y 8 anillo, Av Miguel de Cervantes"
+                        style="@style/StyleContent"
+                        android:ellipsize="end"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="right"
+                        android:paddingTop="8dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="8dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/animation_bottonprimary"
+                                android:id="@+id/carrito_btn_ubicacion"
+
+                                >
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_map"
+                                    android:paddingLeft="5dp"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Visitanos"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    style="@style/StyleContent"
+                                    android:textStyle="bold"
+                                    android:textSize="8dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingLeft="10dp"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:background="@drawable/animation_bottonestadoactivo"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:id="@+id/carrito_btn_whatsapp"
+                                >
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/ic_whatsapp"
+                                    android:paddingLeft="5dp"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Chatea Con Nosotros"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    style="@style/StyleContent"
+                                    android:textStyle="bold"
+                                    android:textSize="8dp"
+                                    android:paddingLeft="10dp"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView android:id="@+id/card_Productos"
+        android:layout_width="fill_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="4dp"
+        app:cardCornerRadius="10dp"
+        android:clipToPadding="true"
+        app:cardPreventCornerOverlap="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Articulos del Carrito"
+                android:id="@+id/empresa_descripcioncorta"
+                android:textStyle="bold"
+                style="@style/StyleTitle"
+                android:textSize="14dp"
+                android:paddingLeft="10dp"
+                android:background="@color/fbutton_color_midnight_blue"
+                android:paddingBottom="7dp"
+                android:paddingTop="5dp"
+
+                />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Productos_carrito"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:background="@color/colorSplashText"
+
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorSplashText"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="right"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1">
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/animation_bottoncancel"
+                                >
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Total Bs "
+                                        android:textColor="@color/gray_dark"
+                                        android:textSize="16dp"
+                                        android:paddingLeft="15dp"
+                                        android:textStyle="bold"
+                                        style="@style/StyleTitle"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        />
+                                    <TextView
+                                        android:id="@+id/carrito_total"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="250.00"
+                                        android:textColor="@color/gray_dark"
+                                        android:textSize="18dp"
+                                        android:paddingRight="18dp"
+                                        android:textStyle="bold"
+                                        style="@style/StyleTitle"
+                                        android:layout_gravity="center"
+                                        android:gravity="right"
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="8dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            >
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="4"
+                            android:padding="2dp"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            >
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_gravity="right"
+                                    android:gravity="right"
+                                    >
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:orientation="horizontal"
+                                        android:layout_gravity="right"
+                                        android:gravity="right"
+                                        >
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Fecha Entrega: "
+                                            android:textColor="@color/gray_dark"
+                                            android:textSize="16dp"
+                                            android:paddingLeft="15dp"
+                                            android:textStyle="bold"
+                                            style="@style/StyleTitle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            />
+                                        <TextView
+                                            android:id="@+id/carito_fecha"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ems="6"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:inputType="date"
+                                            android:textStyle="bold"
+                                            style="@style/StyleTitle"
+                                            android:hint="dd/mm/yyyy"
+                                            android:background="@drawable/animation_bottoncancel"
+                                            />
+
+
+                                        <ImageButton
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/marfil"
+                                            android:src="@drawable/ic_calendario"
+                                            tools:ignore="ContentDescription"
+                                            android:layout_marginTop="4dp"
+                                            android:paddingLeft="4dp"
+                                            />
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:id="@+id/btnState"
+                            >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:background="@drawable/animation_bottonestadoactivo"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:id="@+id/carrito_btn_pedido"
+                                >
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/ic_shopping"
+                                    android:paddingLeft="5dp"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Confirmar Pedido"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    style="@style/StyleContent"
+                                    android:textStyle="bold"
+                                    android:textSize="14dp"
+                                    android:paddingLeft="10dp"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+
+
+
+</android.support.v4.widget.NestedScrollView>

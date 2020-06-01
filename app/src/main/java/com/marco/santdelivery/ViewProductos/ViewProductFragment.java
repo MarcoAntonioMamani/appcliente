@@ -28,6 +28,7 @@ import com.google.gson.reflect.TypeToken;
 import com.labters.lottiealertdialoglibrary.ClickListener;
 import com.labters.lottiealertdialoglibrary.DialogTypes;
 import com.labters.lottiealertdialoglibrary.LottieAlertDialog;
+import com.marco.santdelivery.Carrito.CarritoFragment;
 import com.marco.santdelivery.Empresas.Model.EmpresasEntity;
 import com.marco.santdelivery.Empresas.Model.ProductosImagenesEntity;
 import com.marco.santdelivery.MainActivity;
@@ -65,6 +66,7 @@ TextView tvPrecio;
     TextView tvTotalPrecio;
     List<PedidoDetalle> listDetalle;
     EditText eTextDescripcion;
+    LinearLayout btnCarrito;
     public ViewProductFragment() {
         // Required empty public constructor
     }
@@ -79,6 +81,7 @@ TextView tvPrecio;
         tvMarcaProducto=view.findViewById(R.id.view_marcaProducto);
         tvDescripcion=view.findViewById(R.id.view_descripcionProduct);
         tvCantidadItems=view.findViewById(R.id.product_cantidad_order);
+        btnCarrito=(LinearLayout)view.findViewById(R.id.btn_carrito_view) ;
         tvTotalPrecio=view.findViewById(R.id.product_total_order);
         tvPrecio=view.findViewById(R.id.view_producto_precio);
         sliderLayout = (SliderLayout)view.findViewById(R.id.producto_slider);
@@ -110,9 +113,20 @@ TextView tvPrecio;
         SetearTotalesResumen();
         EventCantidad();
         EventEditText();
+        OnClickCarrito();
         return view;
     }
+    public void OnClickCarrito(){
+        btnCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment frag = new CarritoFragment();
+                MainActivity fca = (MainActivity) getActivity();
+                fca.switchFragment(frag,"Ver Carrito");
 
+            }
+        });
+    }
     public void EventEditText(){
         eTextDescripcion.addTextChangedListener(new TextWatcher() {
             @Override

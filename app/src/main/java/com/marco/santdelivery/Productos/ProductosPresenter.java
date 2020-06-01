@@ -3,12 +3,14 @@ package com.marco.santdelivery.Productos;
 import android.content.Context;
 import com.google.android.gms.common.internal.Preconditions;
 
+import com.google.gson.Gson;
 import com.marco.santdelivery.Cloud.ApiManager;
 import com.marco.santdelivery.Empresas.EmpresasMvp;
 import com.marco.santdelivery.Empresas.Model.Categorias;
 import com.marco.santdelivery.Empresas.Model.ProductosImagenesEntity;
 import com.marco.santdelivery.Productos.Model.ProductosEntity;
 import com.marco.santdelivery.ShareUtil.DataCache;
+import com.marco.santdelivery.ShareUtil.DataPreferences;
 
 import java.util.List;
 
@@ -43,6 +45,9 @@ public class ProductosPresenter  implements ProductorMvp.Presenter{
                 }
                 if (response.isSuccessful() && responseUser != null) {
                     contador++;
+                    Gson gson = new Gson();
+                    String json = gson.toJson(responseUser);
+                    DataPreferences.putPref("Productos",json,mContext);
                     DataCache.listProductos=responseUser;
                     GetImagenes();
                 } else {
@@ -99,6 +104,9 @@ public class ProductosPresenter  implements ProductorMvp.Presenter{
                     return;
                 }
                 if (response.isSuccessful() && responseUser != null) {
+                    Gson gson = new Gson();
+                    String json = gson.toJson(responseUser);
+                    DataPreferences.putPref("Categorias",json,mContext);
                     DataCache.ListCategorias=responseUser;
                     contador++;
                     if (contador==3){

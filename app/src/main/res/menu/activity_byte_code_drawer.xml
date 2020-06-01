@@ -9,7 +9,7 @@
             android:title="Ver Tiendas"
             android:visible="false"/>
         <item
-            android:id="@+id/item_navigation_drawer_pedidos"
+            android:id="@+id/item_carrito"
             android:title="Mi Carrito"
             android:icon="@drawable/ic_order"
             android:visible="true"/>

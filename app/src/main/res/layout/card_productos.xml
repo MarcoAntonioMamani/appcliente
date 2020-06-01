@@ -17,7 +17,6 @@ android:layout_marginLeft="4dp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
 
-    android:paddingBottom="0dp"
     android:id="@+id/linear_fondo"
     >
     <LinearLayout

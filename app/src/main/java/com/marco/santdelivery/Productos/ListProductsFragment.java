@@ -30,6 +30,7 @@ import com.google.gson.Gson;
 import com.labters.lottiealertdialoglibrary.ClickListener;
 import com.labters.lottiealertdialoglibrary.DialogTypes;
 import com.labters.lottiealertdialoglibrary.LottieAlertDialog;
+import com.marco.santdelivery.Carrito.CarritoFragment;
 import com.marco.santdelivery.Empresas.Adapter.EmpresasAdapter;
 import com.marco.santdelivery.Empresas.EmpresasFragment;
 import com.marco.santdelivery.Empresas.EmpresasMvp;
@@ -75,6 +76,7 @@ LinearLayout linearTotal;
 List<PedidoDetalle> listDetalle;
 TextView CantidadPedido;
 TextView TotalPedido;
+LinearLayout btnCarrito;
 
     public ListProductsFragment() {
         // Required empty public constructor
@@ -106,7 +108,7 @@ TextView TotalPedido;
         adapterPerfil.setFilter(mListEmpresas);
         adapterPerfil.notifyDataSetChanged();
         SetearTotalesResumen();
-
+        context=getContext();
     }
 
     @Override
@@ -133,7 +135,7 @@ TextView TotalPedido;
         adapterPerfil.setFilter(mListEmpresas);
         adapterPerfil.notifyDataSetChanged();
         SetearTotalesResumen();
-
+        context=getContext();
     }
 
     public void SetearListCategorias(){
@@ -160,6 +162,7 @@ TextView TotalPedido;
         linearTotal=(LinearLayout)view.findViewById(R.id.linear_totalorder);
         CantidadPedido=(TextView)view.findViewById(R.id.cantidad_order);
         TotalPedido=(TextView)view.findViewById(R.id.total_order);
+        btnCarrito=(LinearLayout)view.findViewById(R.id.linear_list_carrito);
         recListCategoria.setHasFixedSize(true);
         recList = (RecyclerView) view.findViewById(R.id.Productos_CardList);
         recList.setHasFixedSize(true);
@@ -168,6 +171,7 @@ TextView TotalPedido;
         simpleSearchView.setIconifiedByDefault(false);
         listDetalle=new ArrayList<>();
         DataCache.listDetalle=listDetalle;
+        context=getContext();
         new ProductosPresenter(this,getContext());
         if (DataCache.listProductos==null){
             if (isOnline()){
@@ -188,9 +192,20 @@ TextView TotalPedido;
 
         CantidadPedido.setText(0+" Items");
         TotalPedido.setText(0+" Bs");
-
+        OnClickCarrito();
 
         return view;
+    }
+    public void OnClickCarrito(){
+        btnCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment frag = new CarritoFragment();
+                MainActivity fca = (MainActivity) getActivity();
+                fca.switchFragment(frag,"Ver Carrito");
+
+            }
+        });
     }
     public List<ProductosEntity> filter (List<ProductosEntity> bares ,String texto){
         List<ProductosEntity>ListaFiltrada=new ArrayList<>();

@@ -3,12 +3,14 @@ package com.marco.santdelivery.Empresas;
 import android.content.Context;
 
 import com.google.android.gms.common.internal.Preconditions;
+import com.google.gson.Gson;
 import com.marco.santdelivery.Cloud.ApiManager;
 import com.marco.santdelivery.Empresas.Model.Categorias;
 import com.marco.santdelivery.Empresas.Model.EmpresasEntity;
 import com.marco.santdelivery.Empresas.Model.ProductosImagenesEntity;
 import com.marco.santdelivery.Productos.Model.ProductosEntity;
 import com.marco.santdelivery.ShareUtil.DataCache;
+import com.marco.santdelivery.ShareUtil.DataPreferences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +44,9 @@ public class EmpresasPresenter implements EmpresasMvp.Presenter{
                     return;
                 }
                 if (response.isSuccessful() && responseUser != null) {
+                    Gson gson = new Gson();
+                    String json = gson.toJson(responseUser);
+                    DataPreferences.putPref("Empresas",json,mContext);
                     DataCache.ListEmpresas=responseUser;
                     mSincronizarview.MostrarEmpresas(responseUser);
                 } else {
@@ -69,6 +74,9 @@ public class EmpresasPresenter implements EmpresasMvp.Presenter{
                     return;
                 }
                 if (response.isSuccessful() && responseUser != null) {
+                    Gson gson = new Gson();
+                    String json = gson.toJson(responseUser);
+                    DataPreferences.putPref("Productos",json,mContext);
                     DataCache.listProductos=responseUser;
 
                 } else {
@@ -121,6 +129,9 @@ public class EmpresasPresenter implements EmpresasMvp.Presenter{
                     return;
                 }
                 if (response.isSuccessful() && responseUser != null) {
+                    Gson gson = new Gson();
+                    String json = gson.toJson(responseUser);
+                    DataPreferences.putPref("Categorias",json,mContext);
                     DataCache.ListCategorias=responseUser;
 
                 } else {
